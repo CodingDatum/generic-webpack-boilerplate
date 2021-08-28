@@ -1,53 +1,77 @@
-.row{
+.row {
+	@mixin clearFix;
 
-    @mixin clearFix;
+	&--t-padding {
+		padding-top: 80px;
+	}
 
-    &--gutters{
-        margin-right: -65px;
-    }
+	&--gutters {
+		margin-right: -65px;
+	}
 
-    &--gutters-large{
-        margin-right: -100px;
-    }
+	&--gutters-large {
+		margin-right: -100px;
+	}
 
-    &--gutters > div{
-        padding-right: 65px;
-    }
+	&--gutters-small {
+		margin-right: -45px;
+	}
 
-    &--gutters-large > div{
-        padding-right: 100px;
-    }
+	&--gutters > div {
+		padding-right: 65px;
+	}
 
-    &__b-margin-to-medium{
-        margin-bottom:1rem;
-    }
+	&--gutters-large > div {
+		padding-right: 100px;
+	}
 
-    @mixin atMedium{
-        margin-bottom: 0;
-    }
+	&--gutters-small > div {
+		padding-right: 45px;
+	}
 
-    @mixin atMedium{
-        &__medium-4{
-            float: left;
-            width: 33.33%
-        }
+	&__b-margin-to-medium {
+		margin-bottom: 1rem;
+	}
 
-        &__medium-4--larger{
-            width: 37%;
-        }
+	@mixin atMedium {
+		margin-bottom: 0;
+	}
 
-        &__medium-6{
-            float: left;
-            width: 50%;
-        }
-    
-        &__medium-8{
-            float: left;
-            width: 66.66%;
-        }
+	@mixin atMedium {
+		&__medium-4 {
+			float: left;
+			width: 33.33%;
+		}
 
-        &__medium-8--smaller{
-            width: 63%;
-        }
-    }
+		&__medium-4--larger {
+			width: 37%;
+		}
+
+		&__medium-6 {
+			float: left;
+			width: 50%;
+		}
+
+		&__medium-8 {
+			float: left;
+			width: 66.66%;
+		}
+
+		&__medium-8--smaller {
+			width: 63%;
+		}
+	}
+
+	/* Begin equal height rules */
+
+	&--equal-height-at-medium {
+		@mixin atMedium {
+			display: flex;
+		}
+
+		& > div {
+			float: none;
+			display: flex;
+		}
+	}
 }

@@ -1,22 +1,31 @@
-.wrapper{
-    padding: 0px 18px;
-    max-width: 1236px;
-    margin: 0 auto;
-    overflow: hidden;
+.wrapper {
+	padding: 0px 18px;
+	max-width: 1236px;
+	margin: 0 auto;
+	overflow: hidden;
 
-    &--medium{
-        max-width: 976px;
-    }
+	&--medium {
+		max-width: 976px;
+	}
 
-    .wrapper{
-        padding-left: 0;
-        padding-right: 0;
-    }
+	&--no-padding-until-medium {
+		padding-left: 0;
+		padding-right: 0;
 
-    &--b-margin{
-        margin-bottom: 1rem;
-        @mixin atSmall{
-            margin-bottom: 3.875rem;
-        }
-    }
+		@mixin atMedium {
+			padding: 0 18px;
+		}
+	}
+
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--b-margin {
+		margin-bottom: 1rem;
+		@mixin atSmall {
+			margin-bottom: 3.875rem;
+		}
+	}
 }
