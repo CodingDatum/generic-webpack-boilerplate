@@ -4,14 +4,10 @@ class Modal {
         this.innjectHTML();
         this.modal = document.querySelector(".modal");
         this.closeIcon = document.querySelector(".modal__close");
-        this.openModalButtons = document.querySelectorAll(".open-modal");
         this.events();
     }
 
     events(){
-        // First listen for open modal button being clicked on
-        this.openModalButtons.forEach(element => element.addEventListener("click", e => this.openTheModal(e)))
-
         // Second listen for closing modal click
         this.closeIcon.addEventListener("click", () => this.closeTheModal())
 
@@ -19,8 +15,7 @@ class Modal {
         document.addEventListener("keyup", e => this.keyPressHandler(e))
     }
 
-    openTheModal(e) {
-        e.preventDefault();
+    openTheModal() {
         this.modal.classList.add("modal--is-visible");
     }
 
