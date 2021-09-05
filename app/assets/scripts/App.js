@@ -4,8 +4,6 @@ import MobileMenu from './modules/MobileMenu.js';
 import RevealOnScroll from "./modules/RevealOnScroll";
 import StickyHeader from "./modules/StickyHeader";
 
-
-
 let stickyHeader = new StickyHeader();
 let mobileMenu = new MobileMenu();
 new RevealOnScroll(document.querySelectorAll(".feature-item"), 75);
